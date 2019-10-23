@@ -29,6 +29,23 @@ Guide to get started with SQL
         * **SELECT col_1 AS 'c1' FROM new_table**
       * Getting list of all the distinct values of a column:
         * **SELECT DISTINCT col_3 FROM new_table**
+      * Selection based on a screening criteria:
+        * **SELECT * FROM new_table WHERE col_1 < 15**
+      * Selection based on similarity of values:
+        * **SELECT * FROM new_table WHERE col_2 LIKE 'MYNA_E'**
+        * **SELECT * FROM new_table WHERE col_2 LIKE 'M%'**
+      * Dropping entries with a null field
+        * **SELECT * FROM new_table WHERE col_2 IS NOT NULL**
+      * Selection based on lexographic order or range of numbers:
+        * **SELECT * FROM new_table WHERE col_1 BETWEEN 0 AND 1999**
+        * **SELECT * FROM new_table WHERE col_3 BETWEEN 'A' AND 'M'** 
+        * *BETWEEN 'A' AND 'M'* will include rows where col_3 == 'M' but not anything with trails after M
+        * **SELECT * FROM new_table WHERE col_3 BETWEEN 'A' AND 'M' AND col_1 BETWEEN 0 AND 20**
+        * **SELECT * FROM new_table WHERE col_3 BETWEEN 'A' AND 'M' OR col_1 BETWEEN 0 AND 20**
+      * Sorting the outputs:
+        * **SELECT * FROM new_table WHERE col_1 > 20 ORDER BY col_2 DESC;** 
+        * Can replace DESC with ASC to get ascending order 
+        * Works for both numerical and text data types
 
 5. Modifying exisiting table structurally:
     * ALTER TABLE clause lets you modify structure of the table
