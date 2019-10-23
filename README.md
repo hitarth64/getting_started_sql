@@ -3,12 +3,12 @@ Guide to get started with SQL
 
 1. Setup a user with privileges locally
 
-  * Get sudo access to MYSQL server on your machine
-    * **sudo mysql -u root**
-  * Execute the following command:
-    * **GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' IDENTIFIED BY 'password';**
-  * Close the window and log on to the server with the new privileges as:
-    * **mysql -u user -p password**
+   * Get sudo access to MYSQL server on your machine
+     * **sudo mysql -u root**
+   * Execute the following command:
+     * **GRANT ALL PRIVILEGES ON *.* TO 'user'@'localhost' IDENTIFIED BY 'password';**
+   * Close the window and log on to the server with the new privileges as:
+     * **mysql -u user -p password**
 
 2. Creation of tables:
     * Following command creates a new table with name *new_table* and 3 columns each with data type specified next to it
