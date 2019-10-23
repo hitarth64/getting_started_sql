@@ -25,6 +25,10 @@ Guide to get started with SQL
         * **SELECT * FROM new_table**;
       * Extracting information from specific column:
         * **SELECT col_1 FROM new_table**;
+      * Setting aliases for columns in the result output:
+        * **SELECT col_1 AS 'c1' FROM new_table**
+      * Getting list of all the distinct values of a column:
+        * **SELECT DISTINCT col_3 FROM new_table**
 
 5. Modifying exisiting table structurally:
     * ALTER TABLE clause lets you modify structure of the table
