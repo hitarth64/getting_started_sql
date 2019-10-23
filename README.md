@@ -46,6 +46,10 @@ Guide to get started with SQL
         * **SELECT * FROM new_table WHERE col_1 > 20 ORDER BY col_2 DESC;** 
         * Can replace DESC with ASC to get ascending order 
         * Works for both numerical and text data types
+      * Limiting screen output 
+        * **SELECT * FROM new_table LIMIT 5**
+        * Limits the output to 5 results. 
+        * Limit always goes at the very end of the query
 
 5. Modifying exisiting table structurally:
     * ALTER TABLE clause lets you modify structure of the table
