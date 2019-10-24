@@ -51,20 +51,30 @@ Guide to get started with SQL
         * Limits the output to 5 results. 
         * Limit always goes at the very end of the query
 
-5. Modifying exisiting table structurally:
+5. if-else loop equivalent for SQL:
+    ``` SELECT *, 
+      case 
+        when cat_3 = 'v1' then 'o1'
+        when cat_3 = 'v2' then 'o2'
+        else 'o3'
+      end as 'Alias_for_field'
+      from new_table 
+      
+
+6. Modifying exisiting table structurally:
     * ALTER TABLE clause lets you modify structure of the table
     * ADD COLUMN is another clause for addition of a new column
     * A case in example - addition of a new column
       * **ALTER TABLE new_table ADD COLUMN col_4 TEXT;**
       
-6. Modifying existing entries / rows:
+7. Modifying existing entries / rows:
     * **UPDATE celebs SET col_4 = 'nikolaj' WHERE col_1 = 20**
     * Above statement updates col_4 attribute of the entry corresponding to col_1=20
     * In general, **UPDATE** clause is used to update a row and **SET** clause is used to update columns
     * To delete a row / entry, we have **DELETE FROM** clause. 
         * DELETE FROM celebs WHERE col_4 IS NULL
  
-7. Constraining your columns:
+8. Constraining your columns:
     * Introducing a primary key which will be unique to each entry and be used as an identifier
     * UNIQUE clause allows us to impose the constraint that the values in that particular column are all unique; no repitition. 
     * An example is shown below:
