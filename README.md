@@ -52,13 +52,14 @@ Guide to get started with SQL
         * Limit always goes at the very end of the query
 
 5. if-else loop equivalent for SQL:
-    ``` SELECT *, 
+    ``` 
+    SELECT *, 
       case 
         when cat_3 = 'v1' then 'o1'
         when cat_3 = 'v2' then 'o2'
         else 'o3'
       end as 'Alias_for_field'
-      from new_table 
+    from new_table 
       
 
 6. Modifying exisiting table structurally:
