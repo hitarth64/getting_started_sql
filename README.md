@@ -1,5 +1,5 @@
 # Handing Single Tables
-Guide to get started with SQL
+Guide to get started with SQL; Refer to multi_table.md for resources on handling and querying multiple tables. 
 
 1. Setup a user with privileges locally
 
