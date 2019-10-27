@@ -13,21 +13,7 @@ Part 2 of getting started with SQL
         * **SELECT t1.c1, t2.c2 FROM t1 CROSS JOIN t2;**
       * Stacking two tables - condition is the number of columns and their datatypes must be exactly same:
         * **SELECT * FROM t1 UNION SELECT * FROM t2**
-  
-6. if-else loop equivalent for SQL:
-    ``` 
-    SELECT *, 
-      case 
-        when cat_3 = 'v1' then 'o1'
-        when cat_3 = 'v2' then 'o2'
-        else 'o3'
-      end as 'Alias_for_field'
-    from new_table 
-      
-
-7. Modifying exisiting table structurally:
-    * ALTER TABLE clause lets you modify structure of the table
-    * ADD COLUMN is another clause for addition of a new column
-    * A case in example - addition of a new column
-      * **ALTER TABLE new_table ADD COLUMN col_4 TEXT;**
+      * Nesting queries using WITH clause:
+        * **WITH previous_query AS (SELECT * FROM t2 ) SELECT * FROM previous_query JOIN t1 ON t1.c1 = t2.c2;**
+ 
       
