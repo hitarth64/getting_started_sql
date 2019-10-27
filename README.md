@@ -69,8 +69,8 @@ Guide to get started with SQL
         * **SELECT col_1, col_3, avg(col_2) FROM new_table ORDER BY 2 == SELECT col_1, col_3, avg(col_2) FROM new_table ORDER BY col_3**
       * When we want to limit the results of a query based on values of the individual rows, use WHERE. When we want to limit the results of a query based on an aggregate property, use HAVING. An example with HAVING is shown below:
         * ** SELECT col_1, round(avg(col_2)), count(col_3) from fake_apps group by 1 having count(col_3) > 10;**
-      * 
-5. if-else loop equivalent for SQL:
+  
+6. if-else loop equivalent for SQL:
     ``` 
     SELECT *, 
       case 
@@ -81,20 +81,20 @@ Guide to get started with SQL
     from new_table 
       
 
-6. Modifying exisiting table structurally:
+7. Modifying exisiting table structurally:
     * ALTER TABLE clause lets you modify structure of the table
     * ADD COLUMN is another clause for addition of a new column
     * A case in example - addition of a new column
       * **ALTER TABLE new_table ADD COLUMN col_4 TEXT;**
       
-7. Modifying existing entries / rows:
+8. Modifying existing entries / rows:
     * **UPDATE celebs SET col_4 = 'nikolaj' WHERE col_1 = 20**
     * Above statement updates col_4 attribute of the entry corresponding to col_1=20
     * In general, **UPDATE** clause is used to update a row and **SET** clause is used to update columns
     * To delete a row / entry, we have **DELETE FROM** clause. 
         * DELETE FROM celebs WHERE col_4 IS NULL
  
-8. Constraining your columns:
+9. Constraining your columns:
     * Introducing a primary key which will be unique to each entry and be used as an identifier
     * UNIQUE clause allows us to impose the constraint that the values in that particular column are all unique; no repitition. 
     * An example is shown below:
