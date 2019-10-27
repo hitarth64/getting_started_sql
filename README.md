@@ -1,4 +1,4 @@
-# getting_started_sql Handing Single Tables
+# Handing Single Tables
 Guide to get started with SQL
 
 1. Setup a user with privileges locally
