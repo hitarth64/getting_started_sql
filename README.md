@@ -51,6 +51,25 @@ Guide to get started with SQL
         * Limits the output to 5 results. 
         * Limit always goes at the very end of the query
 
+5. Functions in SQL:
+      * Get count based on your clause; returns total number of entries in a column
+        * **SELECT COUNT(col_1) FROM new_table;**
+      * Get sum of all the entries in a column using:
+        * **SELECT SUM(col_2) FROM new_table;**
+      * Get maximum / minimum of a column using the following functions:
+        * **SELECT MAX(col_1) FROM new_table;**
+        * **SELECT MIN(col_1) FROM new_table;**
+      * Get average value of a column:
+        * **SELECT AVG(col_1) FROM new_table;**
+      * Round the results to decimal precision required. Example rounds the value to first decimal. 
+        * **SELECT ROUND(col_1,1) FROM new_table;**
+      * Grouping for aggregate values using - **GROUP BY**. It is used after *WHERE* statement & comes before *ORDER BY* and *LIMIT*
+        * **SELECT col_1, AVG(col_2) FROM new_table GROUP BY col_3;**
+      * Column references: Queried columns can be replaced by the order in which they occur in our syntax:
+        * **SELECT col_1, col_3, avg(col_2) FROM new_table ORDER BY 2 == SELECT col_1, col_3, avg(col_2) FROM new_table ORDER BY col_3**
+      * When we want to limit the results of a query based on values of the individual rows, use WHERE. When we want to limit the results of a query based on an aggregate property, use HAVING. An example with HAVING is shown below:
+        * ** SELECT col_1, round(avg(col_2)), count(col_3) from fake_apps group by 1 having count(col_3) > 10;**
+      * 
 5. if-else loop equivalent for SQL:
     ``` 
     SELECT *, 
